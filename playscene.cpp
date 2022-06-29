@@ -96,8 +96,8 @@ playScene::~playScene()
         delete projInScene[i];
     }
 
-    if(qs != NULL){
-        delete qs;
+    if(bgm != NULL){
+        delete bgm;
     }
 
     if(planeDeath != NULL){
@@ -489,7 +489,7 @@ void playScene::isGameOver()
 {
     if(player != NULL && player->getHP() <= 0)
     {
-        qs->stop();
+        bgm->stop();
         sceneTimer.stop();
 
         QSound * s = new QSound(SOUND_PATH_GAME_OVER);
