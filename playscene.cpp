@@ -300,11 +300,6 @@ void playScene::crashDetectInScene()
     }
 }
 
-void HPShow()
-{
-
-}
-
 // 清除剩余的垃圾
 void playScene::trashClear()
 {
