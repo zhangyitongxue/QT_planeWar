@@ -94,7 +94,7 @@ private:
     QVector< enemyPlane* > enemInScene;
 
     // 背景循环音乐
-    QSound* qs;
+    QSound* bgm;
 
     QSound * planeDeath;
 
