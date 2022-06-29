@@ -13,9 +13,9 @@ playScene::playScene(QString name_, ChooseLevel * chooseScene, QWidget *parent) 
     setWindowIcon(QPixmap(":/res/image/image_Scene/logo.png"));
 
     // 关卡音效
-    qs = new QSound(":/res/audio/bgm.wav", this);
-    qs->play();
-    qs->setLoops(-1);
+    bgm = new QSound(":/res/audio/bgm.wav", this);
+    bgm->play();
+    bgm->setLoops(-1);
 
 
     // 计时器：20ms
@@ -30,7 +30,7 @@ playScene::playScene(QString name_, ChooseLevel * chooseScene, QWidget *parent) 
 
     // 关联"BACK"按钮信号
     connect(Back_button, &QPushButton::clicked, this, [=](){
-        qs->stop();
+        bgm->stop();
         this->hide();
 
         cl->setGeometry(this->geometry());
